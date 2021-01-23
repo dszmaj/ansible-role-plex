@@ -37,4 +37,11 @@ galaxy_info:
     - system
     - apb
 
-dependencies: []
+dependencies:
+  - src: https://github.com/wilmardo/ansible-role-plexupdate.git
+    version: master
+    name: plexupdate
+
+  - src: https://github.com/wilmardo/ansible-role-tautulli.git
+    version: master
+    name: tautulli
