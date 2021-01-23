@@ -35,10 +35,9 @@
         state: present
 
     - name: Add Plex apt repo (Ubuntu & Debian with systemd)
-      apt_repository:
-        repo: "deb https://downloads.plex.tv/repo/deb trusted=yes public main"
-        state: present
-      changed_when: false
+      copy:
+        dest: /etc/apt/sources.list.d/plexmediaserver.list
+        content: deb https://downloads.plex.tv/repo/deb public main
 
     - name: Apt install Plex
       apt:
